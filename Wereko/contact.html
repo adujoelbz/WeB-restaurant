@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wereko">
+    <meta name="descripton" content="website for Wb restaurant">
+    <title>WeB Restaurant</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="IMG/rb_148478.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "tCyd7vIIJXk9o0MN6",
+            });
+        })();
+    </script>
+    <script src="mail.js"></script>
+</head>
+<body>
+    <header class="header">
+        <section class="header_title-line">
+            <figure class="main_header__figure">
+                <img class="emoji" src="IMG/rb_148478.png" alt="emoji">
+                <figcaption class="center main_header__figure__figcaption">
+                    <span class="nowrap"><h1>Contact Us</h1></span>
+                </figcaption>
+            </figure>
+            <button class="threebar" name="3bar" type="button">
+                <div class="icon"></div>
+            </button>
+        </section>
+
+       <button name="closemenu" class="closeMenu" tabindex="-1"></button>
+        
+        <nav class="dropdown">
+            <ul class="dropdown__ul center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/#menu">Our Menu</a></li>
+                <li><a href="hours.html">Restaurant Hours</a></li>
+                <li><a href="about.html">About WeB</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main_info">
+            <figure class="contact-figure">
+                <img src="/IMG/chris-lawton-Y8iaxOGqlLc-unsplash.jpg" alt="pizza">
+                <figcaption class="offscreen">pizza</figcaption>
+            </figure>
+            <hr>
+            <h2 class="contact_h2 center">Our Contact Form</h2>
+            <form id="contact-form">
+               <fieldset>
+                    <legend>Send Us A Message</legend>
+                    <div class="input-group">
+                        <input type="text" id="fullName" class="input" required>
+                        <label for="name" class="label">Enter your name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email_id" class="input" required>
+                        <label for="email" class="label">Enter your email</label>
+                    </div>
+                    
+                    <div class="floating-label">
+                        <textarea name="message" id="message" cols="30" rows="5"  class="message" required></textarea>
+                        <label for="message">Your Message </label>
+                    </div>    
+                </fieldset>
+                <div class="post">
+                    <button type="submit" onclick="SendMail()" class="submit">Submit</button>
+                    <button type="reset" class="reset">Reset</button>
+                </div>
+            </form>
+            <hr>
+            <section>
+                <p>
+                    <h2 class="contact_h2 center">Our Location</h2>
+                </p>
+                <address>
+                    Asokwa-Kumasi, <abbr title="Kumasi City Mall">KCM Juction</abbr> <br>
+                    Opposite the Presby Church, Ak 186-7783
+                </address>
+                <p>Phone: <a href="tel:+233599532888" >+233 599 532 888</a></p>
+            </section>
+            <p class="center Top_p"><a href="#">Back to the top</a></p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            <span id="copyright-year">
+                WeB Restaurant &copy;
+                 <script>
+                         document.write(new Date().getFullYear());
+                </script>
+            </span>
+        </p>
+    </footer>
+</body>
+</html>
